@@ -23,12 +23,13 @@ function createImagesMarkup(images) {
     })
     .join("");
 }
-gallery.onclick = (e) => {
-  if (e.target) {
-    let galleryBox = new SimpleLightbox(".gallery a");
-    galleryBox.on("show.simplelightbox", imagesMarkup);
-  }
-};
+
+let galleryBox = new SimpleLightbox(".gallery a");
+galleryBox
+  .captionSelector("img")
+  .captionsData(alt)
+  .captionPosition("bottom")
+  .captionDelay(250);
 
 // let galleryBox = new SimpleLightbox(".gallery a");
 // galleryBox.on(
@@ -39,10 +40,6 @@ gallery.onclick = (e) => {
 // }
 //   })
 // );
-
-// galleryBox.on("error.simplelightbox", function (e) {
-//   console.log(e); // Some usefull information
-// });
 
 // gallery.onclick = (e) => {
 //   if (e.target) {
