@@ -17,6 +17,7 @@ function createImagesMarkup(images) {
       src="${preview}"
       data-source= "${original}"
       alt= "${description}"
+      loading="lazy"
     />
   </a>
 </li> `;
@@ -26,13 +27,19 @@ function createImagesMarkup(images) {
 
 gallery.onclick = (e) => {
   if (e.target) {
-    basicLightbox
+    const instance = basicLightbox
       .create(
         `
 		<img width="1280"  src="${e.target.dataset.source}">
 	`
       )
       .show();
+    // window.addEventListener("keydown", (e) => {
+    //   if (e.code === "Escape") {
+    //     basicLightbox.close();
+    //   }
+    // });
   }
 };
+
 // console.log(galleryItems);
