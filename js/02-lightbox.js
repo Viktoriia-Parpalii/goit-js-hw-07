@@ -5,13 +5,13 @@ const gallery = document.querySelector(".gallery");
 const imagesMarkup = createImagesMarkup(galleryItems);
 
 gallery.insertAdjacentHTML("beforeend", imagesMarkup);
-gallery.addEventListener("click", (e) => e.preventDefault());
+// gallery.addEventListener("click", (e) => e.preventDefault());
 
 function createImagesMarkup(images) {
   return images
     .map(({ preview, description, original }) => {
       return `<li class="gallery__item">
-  <a class="gallery__link" href=${original}"">
+  <a class="gallery__link" href="${original}">
     <img
       class="gallery__image"
       src="${preview}"
@@ -24,11 +24,11 @@ function createImagesMarkup(images) {
     .join("");
 }
 
-let galleryBox = new SimpleLightbox(".gallery a");
-// galleryBox
-//   .captionSelector("img")
-//   .captionsData(alt)
-//   .captionPosition("bottom")
-//   .captionDelay(250);
+let galleryBox = new SimpleLightbox(".gallery a", {
+  captionSelector: "img",
+  captionsData: "alt",
+  captionPosition: "bottom",
+  captionDelay: 250,
+});
 
 // console.log(galleryItems);

@@ -11,7 +11,7 @@ function createImagesMarkup(images) {
   return images
     .map(({ preview, description, original }) => {
       return `<li class="gallery__item">
-  <a class="gallery__link" href=${original}"">
+  <a class="gallery__link" href="${original}">
     <img
       class="gallery__image"
       src="${preview}"
@@ -34,12 +34,11 @@ gallery.onclick = (e) => {
 	`
       )
       .show();
-    // window.addEventListener("keydown", (e) => {
-    //   if (e.code === "Escape") {
-    //     basicLightbox.close();
-    //   }
-    // });
   }
 };
-
+window.addEventListener("keydown", (e) => {
+  if (e.code === "Escape") {
+    basicLightbox.close();
+  }
+});
 // console.log(galleryItems);
