@@ -25,26 +25,10 @@ function createImagesMarkup(images) {
 }
 
 let galleryBox = new SimpleLightbox(".gallery a");
-galleryBox
-  .captionSelector("img")
-  .captionsData(alt)
-  .captionPosition("bottom")
-  .captionDelay(250);
-
-// let galleryBox = new SimpleLightbox(".gallery a");
-// galleryBox.on(
-//   "show.simplelightbox",
-//   (gallery.onclick = (e) => {
-// if (e.target) {
-//   imagesMarkup;
-// }
-//   })
-// );
-
-// gallery.onclick = (e) => {
-//   if (e.target) {
-//     var lightbox = new SimpleLightbox(".gallery a");
-//   }
-// };
+// galleryBox
+//   .captionSelector("img")
+//   .captionsData(alt)
+//   .captionPosition("bottom")
+//   .captionDelay(250);
 
 // console.log(galleryItems);
