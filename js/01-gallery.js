@@ -34,11 +34,15 @@ gallery.onclick = (e) => {
 	`
       )
       .show();
+
+    // window.addEventListener("keydown", onEscKeyPress);
   }
 };
-window.addEventListener("keydown", (e) => {
-  if (e.code === "Escape") {
-    basicLightbox.close();
-  }
-});
+// window.removeEventListener("keydown", onEscKeyPress);
+// function onEscKeyPress(e) {
+//   if (e.code === "Escape") {
+//     basicLightbox.close();
+//   }
+// }
+
 // console.log(galleryItems);
