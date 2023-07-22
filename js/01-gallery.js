@@ -1,5 +1,4 @@
 import { galleryItems } from "./gallery-items.js";
-// Change code below this line
 
 const gallery = document.querySelector(".gallery");
 const imagesMarkup = createImagesMarkup(galleryItems);
@@ -26,7 +25,7 @@ function createImagesMarkup(images) {
 }
 
 gallery.onclick = (e) => {
-  if (!e.target) {
+  if (e.target.className !== "gallery__image") {
     return;
   }
 
@@ -45,9 +44,6 @@ gallery.onclick = (e) => {
     if (e.code === "Escape") {
       instance.close();
       window.removeEventListener("keydown", onEscKeyPress);
-      console.log(e);
     }
   }
 };
-
-// console.log(galleryItems);

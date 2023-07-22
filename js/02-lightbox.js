@@ -1,11 +1,9 @@
 import { galleryItems } from "./gallery-items.js";
-// Change code below this line
 
 const gallery = document.querySelector(".gallery");
 const imagesMarkup = createImagesMarkup(galleryItems);
 
 gallery.insertAdjacentHTML("beforeend", imagesMarkup);
-// gallery.addEventListener("click", (e) => e.preventDefault());
 
 function createImagesMarkup(images) {
   return images
@@ -30,5 +28,3 @@ let galleryBox = new SimpleLightbox(".gallery a", {
   captionPosition: "bottom",
   captionDelay: 250,
 });
-
-// console.log(galleryItems);
